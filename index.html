@@ -25,6 +25,9 @@
   --muted:   #6B6B62;
   --border:  rgba(28,43,30,0.12);
   --r:       16px;
+  --yellow:  #F5C842;
+  --yellow2: #FFF3C4;
+  --yellow3: #FFF8E1;
   --rl:      24px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -42,10 +45,10 @@ nav{
 .nav-brand{font-family:'Fraunces',serif;font-weight:700;font-size:1rem;color:var(--forest);letter-spacing:-0.3px;}
 .nav-brand span{color:var(--green);}
 .nav-cta{
-  background:var(--forest);color:var(--white);
-  font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.82rem;
+  background:var(--yellow);color:var(--forest);
+  font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.82rem;
   padding:8px 18px;border-radius:50px;text-decoration:none;
-  transition:background 0.2s;letter-spacing:0.2px;
+  transition:background 0.2s,transform 0.2s;letter-spacing:0.2px;
 }
 .nav-cta:hover{background:var(--green);}
 
@@ -61,7 +64,7 @@ nav{
   font-size:0.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;
   padding:6px 14px;border-radius:50px;margin-bottom:22px;
 }
-.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--sage);border-radius:50%;animation:blink 2s infinite;}
+.hero-eyebrow::before{content:'';width:6px;height:6px;background:var(--yellow);border-radius:50%;animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
 .hero h1{
   font-family:'Fraunces',serif;font-weight:900;
@@ -101,18 +104,19 @@ nav{
   font-family:'Fraunces',serif;font-weight:900;
   font-size:2rem;line-height:1;color:var(--forest);margin-bottom:4px;
 }
-.hero-card.dark .hc-num{color:var(--sage);}
+.hero-card.dark .hc-num{color:var(--yellow);}
 .hero-card .hc-label{font-size:0.78rem;color:var(--muted);font-weight:400;}
 .hero-card.dark .hc-label{color:rgba(255,255,255,0.6);}
-.hero-card.wide{grid-column:1/-1;display:flex;align-items:center;gap:12px;}
+.hero-card.wide{grid-column:1/-1;display:flex;align-items:center;gap:12px;border-left:3px solid var(--yellow);}
 .hero-card.wide .hc-icon{font-size:1.6rem;}
 
 /* ── SECTION SHARED ── */
 .section{padding:40px 24px;}
 .sec-tag{
   font-size:0.72rem;font-weight:500;letter-spacing:2px;text-transform:uppercase;
-  color:var(--green);margin-bottom:10px;
+  color:var(--green);margin-bottom:10px;display:inline-flex;align-items:center;gap:8px;
 }
+.sec-tag::before{content:'';display:inline-block;width:18px;height:3px;background:var(--yellow);border-radius:2px;}
 .sec-title{
   font-family:'Fraunces',serif;font-weight:700;
   font-size:1.8rem;line-height:1.15;letter-spacing:-0.5px;
@@ -164,7 +168,7 @@ nav{
 .why-row:last-child{border-bottom:none;}
 .why-num{
   font-family:'Fraunces',serif;font-weight:700;font-size:0.9rem;
-  color:var(--sage);min-width:28px;padding-top:2px;
+  color:var(--yellow);min-width:28px;padding-top:2px;
 }
 .why-content strong{
   font-family:'DM Sans',sans-serif;font-weight:500;
@@ -268,7 +272,7 @@ nav{
   font-family:'Fraunces',serif;font-weight:900;
   font-size:2.8rem;color:white;line-height:1;
 }
-.rating-stars{color:#F0C040;font-size:1.1rem;letter-spacing:2px;}
+.rating-stars{color:var(--yellow);font-size:1.1rem;letter-spacing:2px;}
 .rating-count{font-size:0.78rem;color:rgba(255,255,255,0.5);margin-top:2px;}
 .review-cards{display:flex;flex-direction:column;gap:10px;}
 .review-card{
@@ -276,7 +280,7 @@ nav{
   border:1px solid rgba(255,255,255,0.1);
   border-radius:var(--r);padding:18px;
 }
-.review-stars{color:#F0C040;font-size:0.85rem;margin-bottom:8px;}
+.review-stars{color:var(--yellow);font-size:0.85rem;margin-bottom:8px;}
 .review-text{font-size:0.87rem;color:rgba(255,255,255,0.8);font-style:italic;line-height:1.65;margin-bottom:10px;}
 .review-name{font-size:0.75rem;font-weight:600;color:var(--sage);}
 
@@ -360,7 +364,7 @@ footer{background:var(--forest);padding:36px 24px 100px;}
 .bottom-bar a:hover{opacity:0.85;}
 .bb-call{background:var(--forest);color:white;}
 .bb-wa{background:#25D366;color:white;}
-.bb-book{background:var(--green);color:white;}
+.bb-book{background:var(--yellow);color:var(--forest);font-weight:700;}
 
 /* ── WA FLOAT ── */
 .wa-float{
@@ -385,6 +389,30 @@ footer{background:var(--forest);padding:36px 24px 100px;}
   .bottom-bar{max-width:480px;left:50%;transform:translateX(-50%);border-radius:50px 50px 0 0;}
 }
 
+
+    /* ── YELLOW HIGHLIGHTS ── */
+    .hl-yellow {
+      background: var(--yellow);
+      color: var(--forest);
+      padding: 0 6px 2px;
+      border-radius: 6px;
+      font-style: italic;
+    }
+    .badge-yellow {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--yellow2);
+      border: 1.5px solid var(--yellow);
+      color: #7A5A00;
+      font-size: 0.75rem; font-weight: 600;
+      padding: 4px 12px; border-radius: 50px;
+    }
+    .price-yellow {
+      color: var(--forest);
+      background: var(--yellow);
+      padding: 2px 10px; border-radius: 50px;
+      font-weight: 700;
+    }
+
 /* ── ANIMATIONS ── */
 @keyframes up{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 .hero>*{animation:up 0.6s ease both;}
@@ -406,7 +434,7 @@ footer{background:var(--forest);padding:36px 24px 100px;}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-eyebrow">Seksyen 9, Shah Alam &nbsp;·&nbsp; Buka 6 Hari</div>
-  <h1>Rawatan Gigi<br/><em>Mesra, Mampu<br/>Milik, Berkualiti.</em></h1>
+  <h1>Rawatan Gigi<br/><em><span class="hl-yellow">Mesra,</span> Mampu<br/>Milik, Berkualiti.</em></h1>
   <p class="hero-sub">Klinik gigi pilihan untuk keluarga, pelajar &amp; pekerja di Shah Alam. Harga telus, tiada kos tersembunyi.</p>
   <div class="hero-ctas">
     <a href="#borang" class="btn-dark">📅 Tempah Temujanji</a>
@@ -451,7 +479,7 @@ footer{background:var(--forest);padding:36px 24px 100px;}
       <div class="bc-name">Scaling &amp; Polish</div>
       <div class="bc-bm">Pembersihan Gigi</div>
       <div class="bc-tag">🔥 Paling Popular</div>
-      <div style="margin-top:12px;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--sage);">dari RM80</div>
+      <div style="margin-top:12px;font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--yellow);">dari RM80</div>
       <div style="margin-top:auto;padding-top:12px;font-size:0.78rem;color:rgba(255,255,255,0.5);line-height:1.5;">Buang karang gigi &amp; noda. Gusi sihat, nafas segar.</div>
     </div>
     <div class="bento-card">
