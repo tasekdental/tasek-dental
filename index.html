@@ -8,34 +8,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 
-<!-- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-10777097881"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-10777097881');
-</script> -->
+<!-- PASTE YOUR GOOGLE TAG HERE -->
 
 <style>
 :root {
-  --cream:   #F3EDE2;
-  --cream2:  #EDE5D8;
-  --forest:  #2E5D45;
-  --green:   #3F7A5A;
-  --green2:  #5FA37A;
-  --sage:    #A8D4B8;
-  --warm:    #C4A882;
-  --charcoal:#3A4A3C;
+  --cream:   #EAF6FB;
+  --cream2:  #D6EFF8;
+  --forest:  #20373B;
+  --green:   #519CAB;
+  --green2:  #3D8A9A;
+  --sage:    #C3E7F1;
+  --warm:    #A8D4C8;
+  --charcoal:#20373B;
   --white:   #FFFFFF;
   --text:    #1A1A18;
   --muted:   #6B6B62;
-  --border:  rgba(28,43,30,0.12);
+  --border:  rgba(32,55,59,0.14);
   --r:       16px;
-  --yellow:  #F5C842;
-  --yellow2: #FFF3C4;
-  --yellow3: #FFF8E1;
+  --yellow:  #FFC64F;
+  --yellow2: #FFF4D6;
+  --yellow3: #FEFAF0;
   --rl:      24px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -65,6 +57,7 @@ nav{
   margin-top:56px;
   padding:48px 24px 40px;
   position:relative;
+  background:var(--cream);
 }
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:8px;
@@ -143,7 +136,7 @@ nav{
 
     .bento-card .bc-svg svg { width: 36px; height: 36px; }
     .bento-card.dark .bc-svg svg { color: var(--sage); }
-.bento-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(28,43,30,0.1);}
+.bento-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(32,55,59,0.1);}
 .bento-card.tall{grid-row:span 2;}
 .bento-card.dark{background:var(--forest);border-color:transparent;}
 .bento-card .bc-icon{font-size:1.6rem;margin-bottom:10px;display:block;}
@@ -189,10 +182,10 @@ nav{
     .clinic-section{background:var(--cream2);padding:40px 24px;}
     .clinic-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
     .clinic-img-wrap{border-radius:var(--r);overflow:hidden;position:relative;transition:transform 0.2s,box-shadow 0.2s;}
-    .clinic-img-wrap:hover{transform:scale(1.02);box-shadow:0 12px 32px rgba(28,43,30,0.15);}
+    .clinic-img-wrap:hover{transform:scale(1.02);box-shadow:0 12px 32px rgba(32,55,59,0.15);}
     .clinic-img-wrap.tall{grid-row:span 2;}
     .clinic-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;min-height:160px;}
-    .clinic-img-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(28,43,30,0.75),transparent);color:white;font-size:0.7rem;font-weight:500;padding:20px 10px 8px;letter-spacing:0.3px;}
+    .clinic-img-cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(32,55,59,0.75),transparent);color:white;font-size:0.7rem;font-weight:500;padding:20px 10px 8px;letter-spacing:0.3px;}
     .clinic-feats{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
     .clinic-feat{background:var(--white);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;display:flex;align-items:flex-start;gap:12px;}
     .feat-icon{width:38px;height:38px;border-radius:10px;background:var(--cream);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
@@ -305,7 +298,7 @@ nav{
 .fg label .bm{color:var(--muted);font-weight:400;font-size:0.75rem;}
 .fg input,.fg select,.fg textarea{
   width:100%;padding:12px 14px;
-  border:1.5px solid rgba(28,43,30,0.15);border-radius:10px;
+  border:1.5px solid rgba(32,55,59,0.15);border-radius:10px;
   font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--text);
   background:var(--cream);transition:border-color 0.2s;outline:none;
   -webkit-appearance:none;
@@ -361,7 +354,7 @@ footer{background:var(--forest);padding:36px 24px 100px;}
   position:fixed;bottom:0;left:0;right:0;z-index:997;
   background:white;border-top:1px solid var(--border);
   display:flex;gap:8px;padding:10px 14px;
-  box-shadow:0 -4px 20px rgba(28,43,30,0.1);
+  box-shadow:0 -4px 20px rgba(32,55,59,0.1);
 }
 .bottom-bar a{
   flex:1;display:flex;align-items:center;justify-content:center;gap:5px;
@@ -1224,10 +1217,48 @@ function switchBA(tab, btn) {
 }
 function submitForm(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-btn');
-  btn.textContent = '✅ Borang dihantar! Kami akan hubungi anda.';
-  btn.style.background = '#3F7A5A';
+  const form = e.target;
+
+  // Get form values
+  const name      = form.querySelector('input[type="text"]').value || '-';
+  const phone     = form.querySelector('input[type="tel"]').value || '-';
+  const treatment = form.querySelector('select').value || '-';
+  const date      = form.querySelector('input[type="date"]').value || '-';
+  const notes     = form.querySelector('textarea').value || 'Tiada catatan';
+
+  // Format date nicely
+  let formattedDate = date;
+  if(date) {
+    const d = new Date(date);
+    const days = ['Ahad','Isnin','Selasa','Rabu','Khamis','Jumaat','Sabtu'];
+    const months = ['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogos','Sep','Okt','Nov','Dis'];
+    formattedDate = days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+  }
+
+  // Build WhatsApp message
+  const msg = 
+    '🦷 *TEMUJANJI BARU — Tasek Dental Clinic*' + '\n' +
+    '─────────────────────' + '\n' +
+    '👤 *Nama:* ' + name + '\n' +
+    '📞 *No Tel:* ' + phone + '\n' +
+    '✨ *Rawatan:* ' + treatment + '\n' +
+    '📅 *Tarikh:* ' + formattedDate + '\n' +
+    '📝 *Catatan:* ' + notes + '\n' +
+    '─────────────────────' + '\n' +
+    'Dihantar melalui laman web Tasek Dental.';
+
+  // Update button UI
+  const btn = form.querySelector('.form-btn');
+  btn.textContent = '✅ Dihantar! Membuka WhatsApp...';
+  btn.style.background = '#25D366';
   btn.disabled = true;
+
+  // Open WhatsApp after short delay
+  setTimeout(() => {
+    const waNumber = '60103619232';
+    const waUrl = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg);
+    window.open(waUrl, '_blank');
+  }, 800);
 }
 const dateInput = document.querySelector('input[type="date"]');
 if(dateInput) dateInput.min = new Date().toISOString().split('T')[0];
